@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cold_Call" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7j-DE-4Gj">
+                                <rect key="frame" x="57" y="49" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3B0-X9-00i"/>
+                                    <constraint firstAttribute="width" constant="300" id="vAy-2g-BlB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n43-gC-PAF">
+                                <rect key="frame" x="107" y="811" width="200" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DHl-Of-6jU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cold Call">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="coldCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAc-Iw-31C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="111-s9-SIz">
+                                <rect key="frame" x="107" y="323" width="200" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="QG6-3O-CIf"/>
+                                    <constraint firstAttribute="width" constant="200" id="Uus-ng-Bbb"/>
+                                    <constraint firstAttribute="height" constant="250" id="XIP-z3-SME"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="gIB-DD-2Sp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="155"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.89390530470410079" green="0.98326829680913175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n43-gC-PAF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LOu-1G-ini"/>
+                            <constraint firstItem="X7j-DE-4Gj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MHY-cg-yTc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n43-gC-PAF" secondAttribute="bottom" constant="20" id="UTA-rU-Pzl"/>
+                            <constraint firstItem="111-s9-SIz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fGx-FU-kNw"/>
+                            <constraint firstItem="111-s9-SIz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mDR-bd-fwN"/>
+                            <constraint firstItem="X7j-DE-4Gj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="vYy-dq-76k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ColdCallBt" destination="n43-gC-PAF" id="u7H-gm-F7y"/>
+                        <outlet property="namesLabel" destination="X7j-DE-4Gj" id="oqy-8s-nEz"/>
+                        <outlet property="numLabel" destination="111-s9-SIz" id="Ncm-pJ-kTf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
